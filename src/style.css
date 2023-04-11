@@ -1,0 +1,85 @@
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  font-family: "Mono", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background: white;
+}
+
+.paper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.link {
+  color: #a5a5a5;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.link:hover {
+  color: #333;
+}
+
+del {
+  opacity: 0.5;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index-page {
+  max-height: 100%;
+  padding: 60px 40px 30px 40px;
+  overflow: auto;
+  width: 100%;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+}
+
+.large.box {
+  width: 800px;
+  height: 800px;
+}
+
+.box:not(.borderless){
+  border: 1px solid black;
+}
+
+.box-heading {
+  position: fixed;
+  left: calc(50% - 200px);
+  width: 400px;
+  bottom: calc(50% + 200px);
+}
+
+.box-description {
+  position: fixed;
+  left: calc(50% - 200px);
+  width: 400px;
+  top: calc(50% + 200px);
+}
+
+a[target='_blank']:not(.link) {
+  text-decoration: underline;
+  opacity: 0.75;
+}
