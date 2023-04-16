@@ -1,9 +1,11 @@
-import "./style.css"
-import { createApp } from "vue"
-import { createRouter, createWebHistory } from "vue-router"
+import './main.postcss'
+import 'windi.css'
+import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
-import routes from "pages-generated"
-import App from "./App.vue"
+import routes from 'pages-generated'
+
+import App from './App.vue'
 
 const app = createApp(App)
 const router = createRouter({
@@ -12,4 +14,4 @@ const router = createRouter({
 })
 
 app.use(router)
-app.mount("#app")
+app.mount('#app')

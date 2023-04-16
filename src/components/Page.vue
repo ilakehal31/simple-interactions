@@ -24,8 +24,8 @@
     <slot :work="work" />
   </div>
 </template>
-  
-  <script setup lang='ts'>
+
+<script setup lang='ts'>
 import { ref } from "vue";
 import { useEventListener, useFullscreen, useTitle } from "@vueuse/core";
 import { useRoute } from "vue-router";
@@ -56,8 +56,8 @@ const next = works[index + 1];
 
 useTitle(work ? `${no}. ${work.name}` : "404");
 </script>
-  
-  <style lang='scss' scoped>
+
+<style lang='stylus' scoped>
 .nav {
   position: fixed;
   top: 0;
@@ -83,8 +83,7 @@ useTitle(work ? `${no}. ${work.name}` : "404");
 }
 
 .nav-links {
-  .next,
-  .prev {
+  .next, .prev {
     opacity: 0;
     transition: 0.3s all ease-in-out;
     margin-top: -1.5em;
@@ -93,11 +92,9 @@ useTitle(work ? `${no}. ${work.name}` : "404");
 }
 
 .nav-links:hover {
-  .next,
-  .prev {
+  .next, .prev {
     opacity: 1;
     margin-top: 0;
   }
 }
 </style>
-  

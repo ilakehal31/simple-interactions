@@ -1,7 +1,45 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import type { UserConfig } from 'vite'
+import Pages from 'vite-plugin-pages'
+import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Vue from '@vitejs/plugin-vue'
+import WindiCSS from 'vite-plugin-windicss'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [vue()],
-})
+const config: UserConfig = {
+  optimizeDeps: {
+    include: [
+      '@vueuse/core',
+      '@vueuse/shared',
+      '@vueuse/router',
+      'three',
+      '@iconify/iconify',
+      'lodash-es',
+      'p5i',
+      'matter-js',
+      'matter-attractors',
+    ],
+  },
+  plugins: [
+    Vue(),
+    Pages(),
+    Components({
+      resolvers: [
+        IconsResolver({
+          prefix: '',
+        }),
+      ],
+    }),
+    Icons(),
+    WindiCSS(),
+    AutoImport({
+      imports: [
+        'vue',
+        '@vueuse/core',
+      ],
+    }),
+  ],
+}
+
+export default config

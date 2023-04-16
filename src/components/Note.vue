@@ -18,8 +18,8 @@
     </div>
   </div>
 </template>
-  
-  <script setup lang='ts'>
+
+<script setup lang='ts'>
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 
@@ -30,44 +30,43 @@ if (no.startsWith("x")) no = no.slice(1);
 const hide = Boolean(route.query.shot || route.query.hideFrame);
 const active = ref(false);
 </script>
-  
-  <style lang='scss' scoped>
-  .note {
-    .handle {
-      left: calc(50% - 60px);
-      height: 40px;
-      bottom: -2px;
-      cursor: default;
-    }
 
-    .content {
-      pointer-events: none;
-      left: 50%;
-      width: 500px;
-      max-width: 100vw;
-      min-height: 100px;
-      transform: translate(-50%, 110%);
-      transition: 0.3s all ease-in-out;
-    }
-
-    .modal-bg {
-      pointer-events: none;
-      opacity: 0;
-      transition: 0.2s opacity ease-in-out;
-    }
+<style lang='stylus' scoped>
+.note {
+  .handle {
+    left: calc(50% - 60px);
+    height: 40px;
+    bottom: -2px;
+    cursor: default;
   }
 
-  .note.active {
-    .content {
-      display: block;
-      transform: translate(-50%, 0);
-      pointer-events: auto;
-    }
-
-    .modal-bg {
-      opacity: 0.2;
-      pointer-events: auto;
-    }
+  .content {
+    pointer-events: none;
+    left: 50%;
+    width: 500px;
+    max-width: 100vw;
+    min-height: 100px;
+    transform: translate(-50%, 110%);
+    transition: 0.3s all ease-in-out;
   }
+
+  .modal-bg {
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.2s opacity ease-in-out;
+  }
+}
+
+.note.active {
+  .content {
+    display: block;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+  }
+
+  .modal-bg {
+    opacity: 0.2;
+    pointer-events: auto;
+  }
+}
 </style>
-  
