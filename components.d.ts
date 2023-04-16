@@ -4,10 +4,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonChevronLeft: typeof import('~icons/carbon/chevron-left')['default']
     Note: typeof import('./src/components/Note.vue')['default']
     Page: typeof import('./src/components/Page.vue')['default']
-    Paper: typeof import('./src/components/Paper.vue')['default']
   }
 }
 
