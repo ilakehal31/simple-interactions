@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3333 --open",
-    "build": "cross-env NODE_ENV=production vite build && esno scripts/postbuild.ts",
-    "shot": "esno scripts/screenshot.ts"
+    "build": "cross-env NODE_ENV=production vite build && node scripts/postbuild.ts",
+    "shot": "node scripts/screenshot.ts"
   },
   "dependencies": {
     "@iconify/iconify": "^2.1.2",
@@ -35,7 +35,6 @@
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
     "eslint": "^8.11.0",
-    "esno": "^0.14.1",
     "fs-extra": "^10.0.1",
     "playwright": "^1.20.0",
     "pug": "^3.0.2",
