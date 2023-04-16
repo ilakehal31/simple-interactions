@@ -11,4 +11,4 @@ Le projet "Simple Interaction" est une collection de 10 interactions différente
 
 ## Structure du projet
 
-Le projet est organisé en plusieurs page VueJS, chacune représentant une interaction différente. Les quelque composants utilisé sont situés dans le répertoire `src/components`.
+Le projet est organisé en plusieurs page VueJS, chacune représentant une interaction différente. Les quelques composants utilisé sont situés dans le répertoire `src/components`.
