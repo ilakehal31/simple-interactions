@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3333 --open",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build"
   },
   "dependencies": {
     "@iconify/iconify": "^2.1.2",

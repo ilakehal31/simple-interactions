@@ -4,7 +4,7 @@
   </paper>
   <note>
     <p>
-      hands-on <a href="https://brm.io/matter-js" target="_blank">Matter.js</a>
+      Physical properties : Mass <a href="https://brm.io/matter-js" target="_blank">Matter.js</a>
     </p>
   </note>
 </template>
